@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">  <!-- remove when the site goes live for real -->
+  <title>[Business name]</title>
+  <script src="js/lang-init.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="listings" data-title-he="נכסים למכירה" data-title-en="Properties for sale">
+  <div id="site-header"></div>
+
+  <main>
+    <div class="listings-bar">
+      <div class="container listings-bar__in">
+        <h1 id="listings-title"></h1>
+        <div class="chips" id="chips" role="group"></div>
+        <div class="listings-meta">
+          <span id="count"></span>
+          <button class="btn btn--outline btn--sm map-toggle" id="map-toggle" type="button"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Engel & Völkers style: cards with photo galleries next to a live map -->
+    <div class="listings">
+      <div class="listings__list" id="list"></div>
+      <div class="listings__map"><div id="map" dir="ltr"></div></div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/properties.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/listings.js"></script>
+</body>
+</html>

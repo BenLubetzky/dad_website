@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">  <!-- remove when the site goes live for real -->
+  <title>[Business name]</title>
+  <meta name="description" content="נדל״ן בפורטוגל עם ליווי אישי בעברית — דירות, בתים וקרקעות בכל תקציב.">
+  <script src="js/lang-init.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home" data-title-he="נדל״ן בפורטוגל" data-title-en="Real estate in Portugal">
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Hero: Engel & Völkers style — large serif headline + simple search -->
+    <section class="hero">
+      <div class="container">
+        <h1>
+          <span data-lang="he">מצאו את הבית שלכם בפורטוגל</span>
+          <span data-lang="en">Find your home in Portugal</span>
+        </h1>
+        <p class="lead">
+          <span data-lang="he">דירות, בתים וקרקעות בכל רחבי פורטוגל — עם ליווי אישי בעברית, מהחיפוש הראשון ועד קבלת המפתח.</span>
+          <span data-lang="en">Apartments, houses and land all over Portugal — with personal guidance from the first search to the keys.</span>
+        </p>
+
+        <div class="price-picker">
+          <div class="price-picker__label">
+            <span data-lang="he">בחרו תקציב</span><span data-lang="en">Choose your budget</span>
+          </div>
+          <div class="price-grid" id="price-grid"></div>
+        </div>
+
+        <div class="slider" id="slider" aria-roledescription="carousel"></div>
+      </div>
+    </section>
+
+    <!-- Three main doors: services / why Portugal / contact -->
+    <section class="section">
+      <div class="container">
+        <div class="info-grid">
+          <a class="info-card" href="services.html">
+            <span class="info-card__num">01</span>
+            <h3><span data-lang="he">השירותים שלנו</span><span data-lang="en">Our services</span></h3>
+            <p>
+              <span data-lang="he">מה אנחנו עושים בשבילכם, ולמה כדאי לרכוש דרכנו.</span>
+              <span data-lang="en">What we do for you, and why you should buy through us.</span>
+            </p>
+            <span class="pill__circle" data-icon="arrow" data-icon-class="flip"></span>
+          </a>
+          <a class="info-card info-card--img" href="why-portugal.html">
+            <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1000&q=70" alt="" loading="lazy">
+            <span class="info-card__num">02</span>
+            <h3><span data-lang="he">למה נדל״ן בפורטוגל</span><span data-lang="en">Why Portugal</span></h3>
+            <p>
+              <span data-lang="he">יציבות אירופית, מחירים נגישים, שמש ואוקיינוס.</span>
+              <span data-lang="en">European stability, accessible prices, sun and ocean.</span>
+            </p>
+            <span class="pill__circle" data-icon="arrow" data-icon-class="flip"></span>
+          </a>
+          <a class="info-card" href="contact.html">
+            <span class="info-card__num">03</span>
+            <h3><span data-lang="he">צרו קשר</span><span data-lang="en">Contact us</span></h3>
+            <p>
+              <span data-lang="he">וואטסאפ, טלפון או טופס — איך שנוח לכם. עונים מהר.</span>
+              <span data-lang="en">WhatsApp, phone or form — whatever suits you. We reply fast.</span>
+            </p>
+            <span class="pill__circle" data-icon="arrow" data-icon-class="flip"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured properties on a sand panel (PortugalHomes) -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="panel">
+          <div class="section-head">
+            <h2><span data-lang="he">נכסים נבחרים</span><span data-lang="en">Featured properties</span></h2>
+            <a class="link-underline" href="listings.html"><span data-lang="he">לכל הנכסים</span><span data-lang="en">All properties</span></a>
+          </div>
+          <div class="cards" id="featured"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who we are — PLACEHOLDERS: replace photos, names and roles with the real team -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow"><span data-lang="he">מי אנחנו</span><span data-lang="en">Who we are</span></span>
+            <h2><span data-lang="he">הצוות שלנו</span><span data-lang="en">Our team</span></h2>
+          </div>
+        </div>
+        <div class="team" id="team-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
+      <div class="container">
+        <div class="cta-band">
+          <h2>
+            <span data-lang="he">נמצא לכם <em>את הנכס המתאים</em> בפורטוגל</span>
+            <span data-lang="en">We'll find you <em>the right property</em> in Portugal</span>
+          </h2>
+          <div class="cta-band__actions">
+            <a class="pill pill--wa" href="#" target="_blank" rel="noopener" data-wa-hello>
+              <span data-lang="he">שלחו וואטסאפ</span><span data-lang="en">WhatsApp us</span>
+              <span class="pill__circle" data-icon="whatsapp"></span>
+            </a>
+            <a class="pill" href="contact.html">
+              <span data-lang="he">דברו איתנו</span><span data-lang="en">Talk to us</span>
+              <span class="pill__circle" data-icon="arrowUp"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/properties.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

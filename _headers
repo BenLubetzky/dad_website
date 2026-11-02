@@ -1,0 +1,3 @@
+# Cloudflare Pages headers. Remove the X-Robots-Tag line when the site goes live for real.
+/*
+  X-Robots-Tag: noindex, nofollow

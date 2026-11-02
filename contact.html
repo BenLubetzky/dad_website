@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">  <!-- remove when the site goes live for real -->
+  <title>[Business name]</title>
+  <script src="js/lang-init.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact" data-title-he="צרו קשר" data-title-en="Contact us">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><span data-lang="he">צרו קשר</span><span data-lang="en">Contact</span></span>
+        <h1><span data-lang="he">בואו נדבר</span><span data-lang="en">Let's talk</span></h1>
+        <p class="lead">
+          <span data-lang="he">איך שנוח לכם — וואטסאפ, טלפון, מייל או טופס. אנחנו עונים מהר, בעברית.</span>
+          <span data-lang="en">Whatever suits you — WhatsApp, phone, email or the form. We reply quickly.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section--tight" style="padding-bottom: 96px">
+      <div class="container">
+        <div class="contact-actions">
+          <a class="contact-action contact-action--wa" href="#" target="_blank" rel="noopener" data-wa-hello>
+            <span class="contact-action__icon" data-icon="whatsapp"></span>
+            <h3>WhatsApp</h3>
+            <span><span data-lang="he">הדרך הכי מהירה להגיע אלינו</span><span data-lang="en">The fastest way to reach us</span></span>
+          </a>
+          <a class="contact-action" id="phone-link" href="#">
+            <span class="contact-action__icon" data-icon="phone"></span>
+            <h3><span data-lang="he">טלפון</span><span data-lang="en">Phone</span></h3>
+            <span><bdi dir="ltr" id="phone-text"></bdi></span>
+          </a>
+          <a class="contact-action" id="mail-link" href="#">
+            <span class="contact-action__icon" data-icon="mail"></span>
+            <h3><span data-lang="he">מייל</span><span data-lang="en">Email</span></h3>
+            <span><bdi id="mail-text"></bdi></span>
+          </a>
+        </div>
+
+        <div class="split" style="align-items: start">
+          <div>
+            <h2 style="font-size: clamp(28px,3.4vw,38px)"><span data-lang="he">השאירו פרטים ונחזור אליכם</span><span data-lang="en">Leave your details and we'll call you back</span></h2>
+            <p class="muted"><span data-lang="he">ספרו לנו בקצרה מה אתם מחפשים — אזור, סוג נכס ותקציב — ונחזור עם הצעות מתאימות.</span><span data-lang="en">Tell us briefly what you're looking for — area, property type and budget — and we'll come back with suitable options.</span></p>
+            <img src="https://images.unsplash.com/photo-1585208798174-6cedd86e019a?auto=format&fit=crop&w=1000&q=70" alt="" loading="lazy" style="margin-top: 28px; max-height: 360px">
+          </div>
+
+          <form class="form" data-contact novalidate>
+            <div class="form__fields">
+              <div class="form__row">
+                <div class="field">
+                  <label for="f-name"><span data-lang="he">שם מלא</span><span data-lang="en">Full name</span></label>
+                  <input id="f-name" name="name" required autocomplete="name">
+                </div>
+                <div class="field">
+                  <label for="f-phone"><span data-lang="he">טלפון</span><span data-lang="en">Phone</span></label>
+                  <input id="f-phone" name="phone" type="tel" required autocomplete="tel" dir="ltr">
+                </div>
+              </div>
+              <div class="field">
+                <label for="f-email"><span data-lang="he">מייל</span><span data-lang="en">Email</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" dir="ltr">
+              </div>
+              <div class="field">
+                <label for="f-budget"><span data-lang="he">תקציב</span><span data-lang="en">Budget</span></label>
+                <select id="f-budget" name="budget"></select>
+              </div>
+              <div class="field">
+                <label for="f-msg"><span data-lang="he">מה אתם מחפשים?</span><span data-lang="en">What are you looking for?</span></label>
+                <textarea id="f-msg" name="message"></textarea>
+              </div>
+              <button class="btn btn--dark btn--block" type="submit"><span data-lang="he">שליחה</span><span data-lang="en">Send</span></button>
+            </div>
+            <div class="form__done">
+              <b><span data-lang="he">תודה! קיבלנו את הפרטים.</span><span data-lang="en">Thank you! We got your details.</span></b><br>
+              <span data-lang="he">נחזור אליכם בהקדם.</span><span data-lang="en">We'll get back to you soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/layout.js"></script>
+  <script>
+    (function () {
+      const S = window.SITE;
+      document.getElementById('phone-link').href = 'tel:' + S.phoneHref;
+      document.getElementById('phone-text').textContent = S.phone;
+      document.getElementById('mail-link').href = 'mailto:' + S.email;
+      document.getElementById('mail-text').textContent = S.email;
+
+      const sel = document.getElementById('f-budget');
+      const fill = () => {
+        const v = sel.value;
+        sel.innerHTML = `<option value="">${S.t({ he: 'בחרו טווח', en: 'Choose a range' })}</option>` +
+          S.ranges.map((r) => `<option value="${r.id}">${S.rangeLabel(r).replace(/<[^>]+>/g, '')}</option>`).join('');
+        sel.value = v;
+      };
+      fill();
+      document.addEventListener('langchange', fill);
+    })();
+  </script>
+</body>
+</html>
